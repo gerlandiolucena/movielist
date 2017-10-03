@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Crashlytics (3.8.5):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.12)
+  - ModelMapper (6.0.0)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - Crashlytics
+  - ModelMapper
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
+  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
+  ModelMapper: 3596a82f26c43491f6a8d3a00bcdba6ba0e62a93
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+
+PODFILE CHECKSUM: 4902525037ac6423d73c9d9105df86d0e10acb17
+
+COCOAPODS: 1.2.1
