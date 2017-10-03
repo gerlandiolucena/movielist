@@ -1,0 +1,13 @@
+//
+//  Prod.xcconfig
+//  Movie List
+//
+//  Created by Gerlandio Lucena on 12/07/16.
+//  Copyright © 2016 Gerlandio. All rights reserved.
+//
+
+#include "Pods/Target Support Files/Pods-Movie List/Pods-Movie List.release.xcconfig"
+
+SCHEME=prod
+NAME_PRODUCT=Movie List
+PRODUCT_BUNDLE=net.gerlandiolucena.movielist

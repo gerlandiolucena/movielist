@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>desenv</key>
+	<dict>
+		<key>baseURL</key>
+		<string>https://api.themoviedb.org/3</string>
+		<key>apiKey</key>
+		<string>5172d2ff8a93f6e1418dcb1ef735e0ec</string>
+		<key>imageURL</key>
+		<string>https://image.tmdb.org/t/p/w500/</string>
+	</dict>
+	<key>adhoc</key>
+	<dict>
+		<key>baseURL</key>
+		<string>https://api.themoviedb.org/3</string>
+		<key>apiKey</key>
+		<string>5172d2ff8a93f6e1418dcb1ef735e0ec</string>
+		<key>imageURL</key>
+		<string>https://image.tmdb.org/t/p/w500/</string>
+	</dict>
+	<key>prod</key>
+	<dict>
+		<key>baseURL</key>
+		<string>https://api.themoviedb.org/3</string>
+		<key>apiKey</key>
+		<string>5172d2ff8a93f6e1418dcb1ef735e0ec</string>
+		<key>imageURL</key>
+		<string>https://image.tmdb.org/t/p/w500/</string>
+	</dict>
+	<key>endpoints</key>
+	<dict>
+		<key>movieListUpcoming</key>
+		<string>/movie/upcoming</string>
+		<key>movieListTopRated</key>
+		<string>/movie/top_rated</string>
+		<key>movieListPopular</key>
+		<string>/movie/popular</string>
+		<key>movieListPlaying</key>
+		<string>/movie/now_playing</string>
+		<key>movieListRecents</key>
+		<string>/movie/latest</string>
+		<key>movieListSimilar</key>
+		<string>/movie/{movie_id}/similar</string>
+		<key>movieDetail</key>
+		<string>/movie/{movie_id}</string>
+	</dict>
+</dict>
+</plist>
