@@ -18,6 +18,7 @@ struct Endpoints {
     playing = "endpoints.movieListPlaying",
     recents = "endpoints.movieListRecents",
     similar = "endpoints.movieListSimilar",
-    detail = "endpoints.movieDetail"
+    detail = "endpoints.movieDetail",
+    search = "endpoints.movieSearch"
 }
 

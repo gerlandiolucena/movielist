@@ -16,11 +16,11 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     var movie: Movie? {
         didSet{
-            loadImage()
+            loadInformation()
         }
     }
     
-    func loadImage() {
+    func loadInformation() {
         if let imageUrl:String = ConfigurationProvider.sharedInstance().get(tag: Endpoints.ImageUrl) {
             let finalImageUrl = "\(imageUrl)\(movie?.posterPath ?? "")"
             if let urlImage = URL(string:finalImageUrl) {

@@ -1,5 +1,5 @@
 //
-//  MovieDetailRequest.swift
+//  MovieSearch.swift
 //  Movie List
 //
 //  Created by Gerlandio Da Silva Lucena on 03/10/17.
@@ -9,20 +9,18 @@
 import UIKit
 import Mapper
 
-class MovieDetailRequest: BaseRequest {
+class MovieSearchRequest: BaseRequest {
     init() {
-        super.init(endpointString: Endpoints.detail)
+        super.init(endpointString: Endpoints.search)
     }
     
-    func detail(movieId: Int, sucess: (anyObjectResponse)? = nil, failure: (defaultResponse)? = nil) {
-        defaultURL = defaultURL.replacingOccurrences(of: "{movie_id}", with: "\(movieId)")
-        
-        get(parameters: [:]).response { response in
+    func search(parameters: [String: Any], sucess: (anyObjectResponse)? = nil, failure: (defaultResponse)? = nil) {
+        get(parameters: parameters).response { response in
             if let jsonData = response.data {
                 let responseDictionary = try? JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.allowFragments)
                 if let jsonDictionary = responseDictionary as? NSDictionary {
-                    if let movieDetail = try? MovieDetail(map: Mapper(JSON:jsonDictionary)) {
-                        sucess?(movieDetail, nil)
+                    if let movieList = try? MovieList(map: Mapper(JSON:jsonDictionary)) {
+                        sucess?(movieList, nil)
                     } else {
                         failure?("Não foi possível realizar a comunicação com o servidor.", "Servidor indisponível")
                     }

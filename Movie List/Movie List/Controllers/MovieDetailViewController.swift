@@ -16,6 +16,8 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieReleaseDate: UILabel!
     @IBOutlet weak var movieDuration: UILabel!
     @IBOutlet weak var movieRelease: UILabel!
+    @IBOutlet weak var movieGenre: UILabel!
+    
     var movieDetail: MovieDetail? {
         didSet {
             reloadData()
@@ -39,6 +41,7 @@ class MovieDetailViewController: UIViewController {
         }
         
         movieTitle.text = movieDetail?.title ?? movie?.title
+        self.navigationItem.title = movieDetail?.title ?? movie?.title
         if let dateRelease = movieDetail?.releaseDate ?? movie?.releaseDate {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -49,6 +52,9 @@ class MovieDetailViewController: UIViewController {
         }
         movieDuration.text = "\(movieDetail?.runtime ?? 0) min."
         movieRelease.text = movieDetail?.overview ?? ""
+        if let genreList: [String] = movieDetail?.genres?.map({ $0.name ?? "" }) {
+            movieGenre.text = genreList.joined(separator: ",")
+        }
     }
 }
 

@@ -45,6 +45,8 @@
 		<string>/movie/{movie_id}/similar</string>
 		<key>movieDetail</key>
 		<string>/movie/{movie_id}</string>
+		<key>movieSearch</key>
+		<string>/search/movie</string>
 	</dict>
 </dict>
 </plist>
